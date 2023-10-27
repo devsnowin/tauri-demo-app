@@ -44,25 +44,25 @@ jobs:
               with:
                   node-version: 'lts/*'
                   # cache: 'pnpm' # Set this to npm, yarn or pnpm.
-            
+
             - name: Install pnpm
               uses: pnpm/action-setup@v2
               with:
                   version: 8
                   run_install: false
-                  
+
             - name: Get pnpm store directory
               shell: bash
               run: |
-                echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-    
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
             - name: Setup pnpm cache
               uses: actions/cache@v3
               with:
-               path: ${{ env.STORE_PATH }}
-               key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-               restore-keys: |
-                 ${{ runner.os }}-pnpm-store-
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
 
             - name: Install frontend dependencies
               # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
@@ -73,6 +73,8 @@ jobs:
 
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+                  TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
               with:
                   tagName: ${{ github.ref_name }} # This only works if your workflow triggers on new tags.
                   releaseName: 'App Name v__VERSION__' # tauri-action replaces \_\_VERSION\_\_ with the app version.
