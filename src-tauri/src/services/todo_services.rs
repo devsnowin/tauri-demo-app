@@ -66,13 +66,13 @@ pub fn delete_todo(id: i32) {
     match db.execute(query, (&id,)) {
         Ok(rows_affected) => {
             if rows_affected == 0 {
-                println!("No todo with id {} found.", id);
+                panic!("No todo with id {} found.", id);
             } else {
                 println!("Todo with id {} deleted successfully.", id);
             }
         }
         Err(err) => {
-            eprintln!("Error in deleting todo: {:?}", err);
+            panic!("Error in deleting todo: {:?}", err);
         }
     }
 }
