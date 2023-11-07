@@ -37,7 +37,7 @@
             {
                 "fullscreen": false,
                 "resizable": true,
-                "title": "Todist | Manage all your todos",
+                "title": "Todist | Manage your todos",
                 "width": 800,
                 "height": 600
             }
