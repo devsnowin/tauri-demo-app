@@ -101,7 +101,9 @@ function App() {
 
     return (
         <div className="mx-auto grid min-h-screen w-full max-w-xl grid-rows-[auto_auto_1fr] place-items-center gap-4 px-4 py-8">
-            <h1 className="justify-self-start text-2xl font-bold">Todo App</h1>
+            <h1 className="justify-self-start text-2xl font-bold">
+                Your todos
+            </h1>
             <InputBox />
             {/* todos */}
             {todos.length > 0 ? (
