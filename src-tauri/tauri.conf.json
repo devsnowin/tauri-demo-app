@@ -34,10 +34,10 @@
             "csp": null
         },
         "updater": {
-            "active": false,
+            "active": true,
             "dialog": true,
             "endpoints": [
-                "https://tauri-demo-app-server.vercel.app/releases/{{target}}/{{current_version}}"
+                "https://todist-update-server.vercel.app/update/{{target}}/{{current_version}}"
             ],
             "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEU3QkU4REZCOUIwREY2OUQKUldTZDlnMmIrNDIrNStwemNFMnJuMUV1K0drTWFSVDFiMUNHMDE4VE0zVmNxamNoQU0yK2Evb1AK",
             "windows": {
@@ -49,7 +49,7 @@
             {
                 "fullscreen": false,
                 "resizable": true,
-                "title": "Todist | Manage your todos",
+                "title": "Todist",
                 "width": 800,
                 "height": 600
             }
