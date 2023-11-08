@@ -39,7 +39,7 @@
             "endpoints": [
                 "https://todist-update-server.vercel.app/update/{{target}}/{{current_version}}"
             ],
-            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEU3QkU4REZCOUIwREY2OUQKUldTZDlnMmIrNDIrNStwemNFMnJuMUV1K0drTWFSVDFiMUNHMDE4VE0zVmNxamNoQU0yK2Evb1AK",
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDNGNDUxQTU3OTQwOUI4QzIKUldUQ3VBbVVWeHBGUDZxWE1HdjV1TmdyRjNpM0pzdnhBUFVwS2d1V0NxT3hJcmdzcDNkcXk1cVYK",
             "windows": {
                 "installMode": "passive",
                 "installerArgs": []
