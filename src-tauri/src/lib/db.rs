@@ -14,11 +14,6 @@ pub fn establish_db_connection() -> Connection {
     Connection::open(db_path.as_str()).unwrap_or_else(|_| panic!("Error connecting to {}", db_path))
 }
 
-fn establish_connection() -> Connection {
-    let db_path = "sqlite://".to_string() + get_db_path().as_str();
-    Connection::open(&db_path).unwrap_or_else(|_| panic!("Error connecting to {}", db_path))
-}
-
 fn create_db_file() {
     let db_path = get_db_path();
     let db_dir = Path::new(&db_path).parent().unwrap();
