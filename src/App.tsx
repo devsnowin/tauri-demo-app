@@ -111,7 +111,7 @@ function App() {
             ) : (
                 <div className="flex h-40 w-full max-w-xs flex-col items-center justify-center rounded-md bg-slate-100">
                     <Inbox size={38} />
-                    <p className="text-xl">Your list is empty</p>
+                    <p className="text-xl">List is empty</p>
                 </div>
             )}
         </div>
