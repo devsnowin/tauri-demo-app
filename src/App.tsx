@@ -32,11 +32,7 @@ function InputBox() {
             className="flex w-full items-center gap-2"
             onSubmit={handleSubmit}
         >
-            <Input
-                placeholder="Type your todo"
-                name="todo"
-                autoComplete="off"
-            />
+            <Input placeholder="Add todos" name="todo" autoComplete="off" />
             <Button size="icon" className="w-12">
                 <Plus />
             </Button>
