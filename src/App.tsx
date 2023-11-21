@@ -23,6 +23,7 @@ function InputBox({ newTodo }: InputBoxProps) {
         const formData = new FormData(e.target as HTMLFormElement);
         const todo = String(formData.get('todo'));
         newTodo(todo);
+        e.currentTarget.reset();
     }
 
     return (
