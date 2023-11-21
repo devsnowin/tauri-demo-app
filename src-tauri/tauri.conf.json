@@ -1,0 +1,59 @@
+{
+    "build": {
+        "beforeDevCommand": "pnpm dev",
+        "beforeBuildCommand": "pnpm build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist",
+        "withGlobalTauri": false
+    },
+    "package": {
+        "productName": "Todist"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "shell": {
+                "all": false,
+                "open": true
+            },
+            "dialog": {
+                "all": true
+            },
+            "notification": {
+                "all": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "in.devsnow.todo",
+            "icon": [
+                "icons/32x32.png",
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ]
+        },
+        "updater": {
+            "active": true,
+            "endpoints": [
+                "https://github.com/devsnowin/tauri-demo-app/releases/latest/download/latest.json"
+            ],
+            "dialog": true,
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERGMDIwN0IyQUQxOTEwN0YKUldSL0VCbXRzZ2NDMzFQZGpla01wSjE4ZCsvUU5hZHZUbFRBYlFIN2JRQ093YzhKL0lTcElYV2gK"
+        },
+        "security": {
+            "csp": null
+        },
+        "windows": [
+            {
+                "fullscreen": false,
+                "resizable": true,
+                "title": "Todist",
+                "width": 800,
+                "height": 600
+            }
+        ]
+    }
+}
